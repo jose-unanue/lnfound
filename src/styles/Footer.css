@@ -1,10 +1,10 @@
 .footer {
-  background: #021a87; /* solid deep blue to match navbar */
+  background: #021a87;
   color: #fff;
   text-align: center;
-  padding: 40px 20px; /* more spacing */
+  padding: 40px 20px;
   font-size: 0.95rem;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* subtle top shadow */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .footer-container {
@@ -31,5 +31,5 @@
 }
 
 .footer-links a:hover {
-  color: #ffea61; /* matches navbar hover */
+  color: #ffea61;
 }

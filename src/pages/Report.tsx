@@ -51,7 +51,6 @@ const Report: React.FC = () => {
 
   return (
     <div className="report-container">
-      {/* Instructions */}
       <section className="instructions">
         <h2>How to Submit an Item</h2>
         <div className="instruction-cards">
@@ -74,7 +73,6 @@ const Report: React.FC = () => {
         </div>
       </section>
 
-      {/* Form */}
       <section className="form-section">
         <h2>Report a Lost / Found Item</h2>
         <form onSubmit={handleSubmit}>

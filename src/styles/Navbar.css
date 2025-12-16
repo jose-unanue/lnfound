@@ -15,11 +15,11 @@
   margin: 10px auto;
   max-width: 1200px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.75); /* semi-transparent white */
+  background: rgba(255, 255, 255, 0.75);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
-  backdrop-filter: blur(12px); /* frosted glass effect */
+  backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   transition: all 0.3s ease;
 }
@@ -38,7 +38,7 @@
 }
 
 .navbar a:hover {
-  background-color: #ffdd00; /* LNFound yellow accent */
+  background-color: #ffdd00;
   color: #021a87;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);

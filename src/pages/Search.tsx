@@ -29,7 +29,6 @@ const Search: React.FC = () => {
   const [reports, setReports] = useState<ReportItem[]>([]);
   const [isAdmin, setIsAdmin] = useState(false);
 
-  // Check if the current user is an admin
   useEffect(() => {
     if (!user) return;
     const checkAdmin = async () => {
@@ -45,7 +44,6 @@ const Search: React.FC = () => {
     checkAdmin();
   }, [user]);
 
-  // Fetch reports
   useEffect(() => {
     const fetchReports = async () => {
       if (!user) return;
@@ -61,7 +59,6 @@ const Search: React.FC = () => {
     fetchReports();
   }, [user]);
 
-  // Delete a report
   const handleDelete = async (reportId: string) => {
     try {
       await deleteDoc(doc(db, "lostItems", reportId));
@@ -71,7 +68,6 @@ const Search: React.FC = () => {
     }
   };
 
-  // Mark a report as found
   const handleMarkFound = async (reportId: string) => {
     try {
       await updateDoc(doc(db, "lostItems", reportId), { status: "found" });

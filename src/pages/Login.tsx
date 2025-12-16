@@ -17,7 +17,6 @@ const Login: React.FC = () => {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      // Store token in localStorage in same format as Register
       const authUser = {
         email: user.email!,
         token: user.uid,
@@ -25,9 +24,7 @@ const Login: React.FC = () => {
       };
       localStorage.setItem("lnfound_token", JSON.stringify(authUser));
 
-      navigate("/report"); // redirect to report after login
     } catch (err: any) {
-      // Custom error messages for Firebase auth errors
       switch (err.code) {
         case "auth/user-not-found":
           setError("User not found.");

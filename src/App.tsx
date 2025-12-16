@@ -8,7 +8,6 @@ import Register from './pages/Register'
 import Search from './pages/Search'
 import Profile from './pages/Profile'
 import Claims from './pages/Claim'
-import './styles/App.css'
 import { Routes, Route } from 'react-router-dom'
 
 function App() {

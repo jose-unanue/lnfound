@@ -26,7 +26,6 @@ const Profile: React.FC = () => {
   const [adminRequests, setAdminRequests] = useState<AdminRequest[]>([]);
   const [requestMessage, setRequestMessage] = useState("");
 
-  // Fetch current user info
   useEffect(() => {
     if (!user) return;
     const fetchUser = async () => {
@@ -37,7 +36,6 @@ const Profile: React.FC = () => {
         const data = docSnap.data();
         setIsAdmin(data.isAdmin ?? false);
       } else {
-        // Create user doc if missing
         await setDoc(userRef, { email: user.email, isAdmin: false });
         setIsAdmin(false);
       }
@@ -46,7 +44,6 @@ const Profile: React.FC = () => {
     fetchUser();
   }, [user]);
 
-  // Fetch admin requests if current user is admin
   useEffect(() => {
     if (!isAdmin) return;
     const fetchRequests = async () => {
@@ -72,7 +69,6 @@ const Profile: React.FC = () => {
     fetchRequests();
   }, [isAdmin]);
 
-  // Submit an admin request
   const requestAdmin = async () => {
     if (!user) return;
     try {
@@ -100,7 +96,6 @@ const Profile: React.FC = () => {
     }
   };
 
-  // Approve a request
   const approveRequest = async (requestId: string, requesterToken: string) => {
     try {
       await updateDoc(doc(db, "users", requesterToken), { isAdmin: true });
@@ -117,7 +112,6 @@ const Profile: React.FC = () => {
     }
   };
 
-  // Deny a request
   const denyRequest = async (requestId: string, requesterToken: string) => {
     try {
       await updateDoc(doc(db, "users", requesterToken), { isAdmin: false });
@@ -140,7 +134,6 @@ const Profile: React.FC = () => {
     <div className="profile-container">
       <h1>Your Profile</h1>
 
-      {/* Admin Request Section */}
       {!isAdmin && (
         <div className="admin-request-section card">
           <p>Want admin access? Request it below:</p>
@@ -149,7 +142,6 @@ const Profile: React.FC = () => {
         </div>
       )}
 
-      {/* Admin Approval Panel */}
       {isAdmin && (
         <section className="admin-requests">
           <h2>Admin Requests</h2>

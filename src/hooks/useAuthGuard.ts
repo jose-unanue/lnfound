@@ -1,4 +1,3 @@
-// src/hooks/useAuthGuard.ts
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import type { User } from "firebase/auth";
@@ -42,7 +41,6 @@ export default function useAuthGuard(): AuthUser | null {
     }
   }, [navigate]);
 
-  // Also keep Firebase's auth in sync
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((firebaseUser: User | null) => {
       if (!firebaseUser) {

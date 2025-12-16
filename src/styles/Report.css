@@ -9,7 +9,6 @@
   font-family: "Inter", sans-serif;
 }
 
-/* Hero Section */
 .report-hero {
   text-align: center;
   padding: 60px 30px;
@@ -33,7 +32,6 @@
   margin: auto;
 }
 
-/* Instructions */
 .instructions {
   margin-bottom: 50px;
   text-align: center;
@@ -79,7 +77,6 @@
   line-height: 1.4;
 }
 
-/* Custom File Upload */
 .custom-file-upload {
   margin: 15px 0;
 }
@@ -100,10 +97,9 @@
 }
 
 .custom-file-upload input[type="file"] {
-  display: none; /* hide default file input */
+  display: none;
 }
 
-/* Rest of the form styling */
 input, textarea, select {
   width: 100%;
   padding: 10px 12px;
@@ -133,8 +129,6 @@ button[type="submit"]:hover {
   transform: translateY(-2px);
 }
 
-
-/* Form Section */
 .form-section {
   background: rgba(255, 255, 255, 0.05);
   padding: 40px 30px;

@@ -39,7 +39,6 @@ const Claim: React.FC = () => {
   const [claims, setClaims] = useState<ClaimItem[]>([]);
   const [message, setMessage] = useState("");
 
-  // Fetch user info
   useEffect(() => {
     if (!user) return;
 
@@ -62,7 +61,6 @@ const Claim: React.FC = () => {
     fetchUser();
   }, [user]);
 
-  // Fetch items to claim
   useEffect(() => {
     const fetchItems = async () => {
       const snapshot = await getDocs(collection(db, "lostItems"));
@@ -75,7 +73,6 @@ const Claim: React.FC = () => {
     fetchItems();
   }, []);
 
-  // Fetch claims for admin
   useEffect(() => {
     if (!isAdmin) return;
     const fetchClaims = async () => {
@@ -85,8 +82,8 @@ const Claim: React.FC = () => {
       const data: ClaimItem[] = snapshot.docs.map((d) => {
         const docData = d.data() as ClaimItem;
         return {
-          docId: d.id, // keep the Firestore doc ID separate
-          ...docData, // spread the rest of the fields
+          docId: d.id,
+          ...docData,
         };
       });
       setClaims(data);
@@ -94,19 +91,16 @@ const Claim: React.FC = () => {
     fetchClaims();
   }, [isAdmin]);
 
-  // Submit a new claim
   const submitClaim = async () => {
     if (!user || !selectedItem || !file) {
       setMessage("Please select an item and upload your ID.");
       return;
     }
     try {
-      // Upload file
       const fileRef = ref(storage, `claims/${user.uid}-${file.name}`);
       await uploadBytes(fileRef, file);
       const url = await getDownloadURL(fileRef);
 
-      // Add claim document
       await addDoc(collection(db, "claims"), {
         itemId: selectedItem,
         itemName:
@@ -126,10 +120,8 @@ const Claim: React.FC = () => {
     }
   };
 
-  // Admin actions
   const approveClaim = async (itemId: string) => {
     try {
-      // Find all claims with this itemId
       const q = query(collection(db, "claims"), where("itemId", "==", itemId));
       const snapshot = await getDocs(q);
 
@@ -153,7 +145,6 @@ const Claim: React.FC = () => {
 
   const denyClaim = async (itemId: string) => {
     try {
-      // Find all claims with this itemId
       const q = query(collection(db, "claims"), where("itemId", "==", itemId));
       const snapshot = await getDocs(q);
 
@@ -181,7 +172,6 @@ const Claim: React.FC = () => {
     <div className="claim-page">
       <h1>Claim an Item</h1>
 
-      {/* User submission */}
       {!isAdmin && (
         <div className="claim-form card">
           <label>Select Item:</label>
@@ -219,7 +209,6 @@ const Claim: React.FC = () => {
         </div>
       )}
 
-      {/* Admin review */}
       {isAdmin && (
         <section className="claims-admin">
           <h2>Pending Claims</h2>
