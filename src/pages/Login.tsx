@@ -24,6 +24,7 @@ const Login: React.FC = () => {
       };
       localStorage.setItem("lnfound_token", JSON.stringify(authUser));
 
+      navigate("/profile");
     } catch (err: any) {
       switch (err.code) {
         case "auth/user-not-found":
