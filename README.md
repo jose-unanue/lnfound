@@ -34,32 +34,17 @@ Backend / Database: Firebase Firestore
 
 Authentication: Firebase Authentication
 
-## File Structure (Key Files)
-src/
-├── components/
-│   ├── Profile.tsx        # User profile and admin request panel
-│   ├── Search.tsx         # Search and browse lost/found reports
-│   ├── Claim.tsx          # Submit and manage claims
-├── hooks/
-│   └── useAuthGuard.ts    # Custom hook for user authentication
-├── styles/
-│   ├── Profile.css
-│   ├── Search.css
-│   └── Claim.css
-├── firebase/
-│   └── firebase.ts        # Firebase config & initialization
-
 ## Setup & Installation
 
 Clone the repository
 
-git clone <repository-url>
-cd <repository-folder>
+``git clone <repository-url>
+cd <repository-folder>``
 
 
 Install dependencies
 
-npm install
+``npm install``
 
 
 Firebase Setup
@@ -72,13 +57,12 @@ Replace the firebase/firebase.ts configuration with your Firebase project creden
 
 Run the app
 
-npm start
+``npm start``
 
 
 Access the app
 
-Open http://localhost:3000
- in your browser.
+Open ``http://localhost:3000`` in your browser.
 
 ## Notes
 
