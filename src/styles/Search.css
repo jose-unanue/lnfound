@@ -1,0 +1,150 @@
+.search-page {
+  padding-top: 120px; /* space for sticky navbar */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #fff;
+}
+
+.search-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #ffdd00;
+  text-align: center;
+}
+
+.report-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.report-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  overflow: hidden;
+  width: 280px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.report-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+}
+
+.report-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.report-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.report-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  color: #ffdd00;
+}
+
+.report-content p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.status.lost {
+  background-color: rgba(255, 0, 0, 0.2);
+  color: #ff4d4d;
+}
+
+.status.found {
+  background-color: rgba(0, 255, 0, 0.2);
+  color: #4dff4d;
+}
+
+.report-content small {
+  display: block;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+/* Admin action buttons */
+.admin-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.admin-actions button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-actions button.mark-found {
+  background: rgba(0, 123, 255, 0.25);
+  color: #00c8ff;
+}
+
+.admin-actions button.mark-found:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.3);
+}
+
+.admin-actions button.delete {
+  background: rgba(220, 53, 69, 0.25);
+  color: #ff4d4d;
+}
+
+.admin-actions button.delete:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(220, 53, 69, 0.3);
+}
+
+.no-reports {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #ddd;
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .report-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .admin-actions {
+    flex-direction: column;
+  }
+
+  .admin-actions button {
+    margin: 5px 0;
+  }
+}

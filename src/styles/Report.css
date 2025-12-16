@@ -1,0 +1,237 @@
+.report-container {
+  min-height: 100vh;
+  padding: 120px 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background: linear-gradient(to bottom, #063970 0%, #021a87 100%);
+  color: #fff;
+  font-family: "Inter", sans-serif;
+}
+
+/* Hero Section */
+.report-hero {
+  text-align: center;
+  padding: 60px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+.report-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: #ffdd00;
+}
+
+.report-hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Instructions */
+.instructions {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.instructions h2 {
+  color: #ffdd00;
+  margin-bottom: 25px;
+  font-size: 2.2rem;
+}
+
+.instruction-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.instruction-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 20px 25px;
+  min-width: 180px;
+  max-width: 220px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instruction-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3);
+}
+
+.instruction-card h3 {
+  color: #ffdd00;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.instruction-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Custom File Upload */
+.custom-file-upload {
+  margin: 15px 0;
+}
+
+.custom-file-upload label {
+  display: inline-block;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.custom-file-upload label:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.custom-file-upload input[type="file"] {
+  display: none; /* hide default file input */
+}
+
+/* Rest of the form styling */
+input, textarea, select {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  background: #ffdd00;
+  color: #021a87;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #fff176;
+  transform: translateY(-2px);
+}
+
+
+/* Form Section */
+.form-section {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+}
+
+.form-section h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #ffdd00;
+  text-align: center;
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.form-section input,
+.form-section textarea,
+.form-section select {
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+
+.form-section textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-section select {
+  cursor: pointer;
+}
+
+.form-section button {
+  background: #ffdd00;
+  color: #021a87;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.form-section button:hover {
+  background: #fff176;
+  transform: translateY(-2px);
+}
+
+.form-section input[type="file"] {
+  padding: 10px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+.form-section input[type="file"]:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+
+.message {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #ffea61;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .report-hero h1 {
+    font-size: 2rem;
+  }
+  .report-hero p {
+    font-size: 1rem;
+  }
+  .report-steps ol,
+  .form-section form {
+    width: 100%;
+  }
+}

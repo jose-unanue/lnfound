@@ -1,0 +1,235 @@
+/* ---------- Global ---------- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #063970 0%, #021a87 70%); /* deep blue, strong LNFound color */
+  color: #fff;
+  padding: 20px 60px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+
+
+
+/* ---------- Hero ---------- */
+.hero {
+  margin-top: 100px;
+  padding: 100px 40px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.07); /* slightly translucent for glass effect */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35); /* strong shadow for premium floating look */
+  text-align: center;
+  color: #ffdd00; /* yellow accent */
+  transition: transform 0.3s ease;
+}
+
+.hero:hover {
+  transform: translateY(-5px);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffdd00; /* highlight yellow */
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #fff;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+}
+
+.cta-button {
+  background: #ffdd00;
+  color: #021a87;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #fff176;
+  transform: translateY(-3px);
+}
+
+/* ---------- About ---------- */
+.about {
+  margin-top: 80px;
+  padding: 50px 40px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffdd00;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto 15px auto;
+}
+
+/* ---------- Features ---------- */
+.features {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ffdd00;
+}
+
+.feature-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px 25px;
+  min-width: 220px;
+  max-width: 280px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #ffdd00;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ---------- How It Works ---------- */
+.how-it-works {
+  margin-top: 80px;
+  padding: 60px 40px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.how-it-works h2 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #ffdd00;
+}
+
+.how-it-works ol {
+  text-align: left;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-left: 20px;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+/* ---------- Impact / Stats ---------- */
+.impact {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.impact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ffdd00;
+}
+
+.impact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.impact-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px 25px;
+  min-width: 220px;
+  max-width: 280px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3);
+}
+
+.impact-card h3 {
+  color: #ffdd00;
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+}
+
+.impact-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .feature-cards,
+  .impact-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}

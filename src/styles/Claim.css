@@ -1,0 +1,154 @@
+.claim-page {
+  padding-top: 120px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #fff;
+}
+
+.claim-page h1,
+.claim-page h2 {
+  text-align: center;
+  color: #ffdd00;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.claim-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.claim-form select,
+.claim-form input[type="file"] {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  padding: 6px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.claim-form button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(0, 123, 255, 0.25);
+  color: #00c8ff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.claim-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.3);
+}
+
+.claims-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.claim-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+}
+
+.id-holder {
+    font-size: 13.333px;
+    font-weight: bold;
+    text-align: center;
+    width: 50%;
+    padding: 6px 10px;
+    margin: 0 auto;
+    background: rgba(0, 255, 55, 0.25);
+    border-radius: 12px;
+}
+
+.id-holder:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 255, 55, 0.3);
+    cursor: pointer;
+}
+
+.claim-card a {
+  color: #00ff55;
+  text-decoration: none;
+}
+
+.claim-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.claim-buttons button {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 12px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.claim-buttons button.approve {
+  background: rgba(0, 123, 255, 0.25);
+  color: #00c8ff;
+}
+
+.claim-buttons button.approve:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.3);
+}
+
+.claim-buttons button.deny {
+  background: rgba(220, 53, 69, 0.25);
+  color: #ff4d4d;
+}
+
+.claim-buttons button.deny:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(220, 53, 69, 0.3);
+}
+
+.message {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #ffdd00;
+}
+
+.file-upload-btn {
+  width: 100%;
+  padding: 12px;
+  margin: 20px 0;
+  border-radius: 12px;
+  border: none;
+  background: rgba(0, 123, 255, 0.25);
+  color: #00c8ff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.file-upload-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.3);
+}

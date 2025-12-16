@@ -1,0 +1,65 @@
+.navbar-container {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  margin: 0 auto;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  margin: 10px auto;
+  max-width: 1200px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.75); /* semi-transparent white */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(12px); /* frosted glass effect */
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+
+.navbar a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+  color: #021a87;
+  font-weight: 500;
+  font-size: 1.05rem;
+  padding: 10px 15px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #ffdd00; /* LNFound yellow accent */
+  color: #021a87;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.navbar .register {
+  padding: 10px 22px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 14px;
+  border: 2px solid #021a87;
+  background-color: transparent;
+  color: #021a87;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.navbar .register:hover {
+  background-color: #021a87;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
