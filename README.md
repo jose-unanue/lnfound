@@ -53,16 +53,16 @@ Create a Firebase project.
 
 Enable Firestore and Authentication (Email/Password or preferred method).
 
-Replace the firebase/firebase.ts configuration with your Firebase project credentials.
+Replace the ``firebase/firebase.ts`` configuration with your Firebase project credentials.
 
 Run the app
 
-``npm start``
+``npm run dev``
 
 
 Access the app
 
-Open ``http://localhost:3000`` in your browser.
+Open ``http://localhost:5173`` in your browser.
 
 ## Notes
 
