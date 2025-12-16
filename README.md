@@ -1,75 +1,97 @@
-# React + TypeScript + Vite
+## LNFound
+Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This web application allows users to report lost and found items, submit claims, and request administrative privileges. Admin users can review reports, approve or deny claims, and manage user requests, providing an organized and secure system for tracking lost items.
 
-Currently, two official plugins are available:
+The app is built with React + TypeScript on the frontend and Firebase (Firestore) for authentication and database management.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+For Normal Users
 
-## React Compiler
+Report Lost or Found Items: Users can submit items with a description, image, and status (Lost/Found).
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+View Recent Reports: Recent lost and found items are displayed with images and details.
 
-Note: This will impact Vite dev & build performances.
+Submit Claims: Users can claim items they recognize or have found, including uploading identification (e.g., school ID).
 
-## Expanding the ESLint configuration
+Request Admin Access: Users can request admin privileges to help manage items and claims.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+For Admin Users
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Approve/Deny Admin Requests: Admins can grant or deny admin privileges to users.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Review Reports: Admins can view lost and found reports and manage their status.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Approve/Deny Claims: Admins can verify claims submitted by users and update claim statuses.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Delete Reports: Admins can remove inappropriate or resolved reports from the database.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Technology Stack
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Frontend: React, TypeScript, CSS
+
+Backend / Database: Firebase Firestore
+
+Authentication: Firebase Authentication
+
+## File Structure (Key Files)
+src/
+├── components/
+│   ├── Profile.tsx        # User profile and admin request panel
+│   ├── Search.tsx         # Search and browse lost/found reports
+│   ├── Claim.tsx          # Submit and manage claims
+├── hooks/
+│   └── useAuthGuard.ts    # Custom hook for user authentication
+├── styles/
+│   ├── Profile.css
+│   ├── Search.css
+│   └── Claim.css
+├── firebase/
+│   └── firebase.ts        # Firebase config & initialization
+
+## Setup & Installation
+
+Clone the repository
+
+git clone <repository-url>
+cd <repository-folder>
+
+
+Install dependencies
+
+npm install
+
+
+Firebase Setup
+
+Create a Firebase project.
+
+Enable Firestore and Authentication (Email/Password or preferred method).
+
+Replace the firebase/firebase.ts configuration with your Firebase project credentials.
+
+Run the app
+
+npm start
+
+
+Access the app
+
+Open http://localhost:3000
+ in your browser.
+
+## Notes
+
+The app ensures that users cannot submit duplicate admin requests.
+
+Admin privileges must be explicitly approved by another admin.
+
+All sensitive actions (approving claims, deleting reports) are restricted to admin users.
+
+## Future Improvements
+
+Add notifications for admins and users when reports or claims are updated.
+
+Add pagination for large sets of lost/found items.
+
+Implement role-based routing for better access control.
